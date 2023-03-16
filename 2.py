@@ -40,4 +40,50 @@ software[1] = 'CPU'
 print(software)
 # Висновок: у списку можливо замінити елемент, у кортежі - ні.
 # Задача 1:
-
+languages = ['Ukrainian', 'French', 'Bulgarian', 'Norwegian', 'Latvian']
+languages = sorted(languages)
+print(languages)
+languages.reverse()
+print(languages)
+languages.sort()
+print(languages)
+# Задача 2:
+numbers = input().split()
+sum = 0
+for i in numbers:
+    sum += int(i)
+print(sum)
+# Задача 3:
+cities = ['Budapest', 'Rome', 'Istanbul', 'Sydney', 'Kyiv', 'Hong Kong']
+message = ', '.join(cities[:-1]) + ' and ' + cities[-1]
+print(message)
+# Задача 4:
+digits = input().split()
+list_reverse = sorted(digits, reverse=True)
+number = int(''.join(list_reverse))
+print(number)
+# Задача 5:
+oceans = ['Pacific Ocean', 'Arctic Ocean', 'Indian Ocean', 'Atlantic Ocean']
+oceans_copy = list(oceans)
+print(oceans_copy)
+print(len(oceans))
+print(list('oceans'))
+print(', '.join(oceans))
+print(oceans.index('Indian Ocean'))
+oceans.append('Southern Ocean')
+print(oceans)
+oceans.insert(6, 'Non-existent Ocean')
+print(oceans)
+del oceans[-1]
+print(oceans)
+sorted_oceans = sorted(oceans)
+print(sorted_oceans)
+oceans.reverse()
+print(oceans)
+# Задача 6:
+keywords = ('for', 'if', 'else', 'in', ':')
+print(f'{keywords[0]} each token {keywords[3]} the postfix expression {keywords[-1]}')
+print(f'{keywords[1].rjust(6)} the token is a number {keywords[-1]}')
+print(f'print('"'Convert it to an integer and add it to the end of values'"')'.rjust(73))
+print(f'{keywords[2].rjust(8)} {keywords[-1]}')
+print(f'print('"'Append the result to the end of values'"')'.rjust(55))
