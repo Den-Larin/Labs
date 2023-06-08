@@ -1,3 +1,4 @@
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -37,5 +38,22 @@ if html_tag:
     nested_tags = html_tag.find_all()
     for tag in nested_tags:
         print(tag.name)
-# 15
+#15
+body_tag = soup.find('body')
+body_tag_child = [tag.name for tag in body_tag.descendants if tag.name is not None]
+print(body_tag_child)
+#16
+print(soup.title)
+print(soup.title.get_text())
+print(soup.title.parent)
+#17
+li_tags = soup.find_all('li')
+for tag in li_tags:
+    print(tag)
+#18
+text = soup.find_all(string = re.compile('Python'))
+for txt in text:
+    print(txt)
+#19
+print(soup.select('#my-id'))
 
